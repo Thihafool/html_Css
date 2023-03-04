@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+body {
+    padding: 0;
+    margin: 0;
+    /* background-color: #EEF7EA; */
+    height: 1024px;
+    font-family: 'Kanit', sans-serif;
+}
+.homepage {
+    background-image: url(./plantbase/pexels-scott-webb-305821.jpg);
+    height: 100vh;
+    background-position: top 60% right 0%;
+    background-size: cover;
+    object-fit: cover;
+}
+.menucontainer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 45px;
+}
+/* .cover img {
+    position: absolute;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+} */
+.hometext {
+    padding: 90px 120px;
+    font-size: 2rem;
+    font-weight: 350;
+}
+.hometext h2 {
+    margin-bottom: 0px;
+}
+.hometext p {
+    font-size: 20px;
+}
+.logo {
+    font-size: 18px;
+    text-decoration: none;
+    color: inherit;
+}
+.menuitem a {
+    text-decoration: none;
+    margin-right: 15px;
+    color: inherit;
+    position: relative;
+    font-size: 18px;
+}
+
+.menuitem a::after {
+    content: "";
+    width: 0%;
+    height: 3px;
+    background-color:#77ac59;
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.menuitem a:hover::after,.menuitem .active::after {
+    width: 100%;
+}
+.btn {
+    box-shadow: 3px 4px 5px rgba(0,0,0,.2);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 1rem 2rem;
+    color: white;
+    background-color: #77ac59;
+}
+
+.imgcontainer {
+    position: relative;
+    margin: 20px;
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+}
+.content {
+    color: inherit;
+    margin-top: 20px;
+    padding-left: 20px;
+    position: absolute;
+}
+
+.one img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-size: cover;
+}
+.two img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+.productcontainer {
+    max-width: 960px;
+    margin: 0px auto 0px auto;
+    display: grid;
+    
+    /* grid-template-columns: auto auto auto auto; */
+    grid-template-columns: repeat(auto-fit, minmax(180px, auto));
+    gap: 1rem;
+    margin-top: 2rem;
+}
+.box {
+    position: relative;
+    padding: 6px 8px;
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+.productimg img {
+    width: 100%;
+    height: 270px;
+}
+.productimg i {
+    position: absolute;
+    background-color: #bff99d;
+    display: flex;
+    border-radius: 50px;
+    width: 35px;
+    justify-content: center;
+    align-items: center;
+    height: 35px;
+    right: 20px;
+    bottom: 16px;
+}
+.productimg p {
+    font-size: 18px;
+    font-weight: 500;
+}
+.text1 h1 {
+    text-align: center;
+    color: #77ac59;
+}
+.sendmesg {
+    margin-top: 20px;
+    background-color: #eeeeee;
+    display: flex;
+    justify-content: space-around;
+}
+.emai {
+    display: flex;
+    align-items: center;
+}
+.email {
+    padding-left: 20px;
+    border: none;
+    width: 280px;
+    height: 36.5px;
+}
+.butt {
+    color: white;
+    background-color: #77ac59;
+    border: none;
+    padding: 0.7rem 2rem;
+}
+.footer {
+    
+    padding: 8px 1px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.footer a{
+    padding-right: 30px;
+    text-decoration: none;
+    color: inherit;
+}
+@media (max-width: 1200px){
+    .homepage {
+        height: 70vh;
+        background-size: cover;
+    }
+    .btn {
+        font-size: 15px;
+        padding: 0.7rem 1.4rem;
+    }
+    .hometext{
+        padding: 35px 120px;
+        font-size: 1.5rem;
+        font-weight: 150;
+    }
+    .hometext p {
+        font-size: 17px;
+    }
+    .content h2 {
+        font-size: 1.4rem;
+    }
+    .content p {
+        font-size: 1.4rem;
+    }
+    
+
+}
+@media (max-width: 960px){
+        .hometext{
+            padding: 40px 80px;
+            font-size: 0.7rem;
+            font-weight: 150;
+        }
+        .homepage {
+            height: 60vh;
+        }
+        .content h2 {
+            font-size: 1rem;
+        }
+        .content span {
+            font-size: 1rem;
+        }
+        .btn {
+            font-size: 10px;
+            padding: 0.5rem 1rem;
+        }
+        .hometext p {
+            font-size: 0.7rem;
+        }
+        .text1 h1 {
+            font-size: 1.5rem;
+        }
+
+        /* .productcontainer {
+            max-width: 550px;
+            margin: 0px auto 0px auto;
+            display: grid;
+            gap: 0.5rem;
+            margin-top: 2rem;
+            grid-template-columns: auto  auto;
+        } */
+}
+@media (max-width: 860px) {
+    .email {
+        padding-left: 20px;
+        border: none;
+        width: 190px;
+        height: 28.5px;
+    }
+    .text3 h3 {
+        font-size: 1rem;
+    }
+    .productimg p {
+        font-size: 15px;
+        font-weight: 500;
+    }
+    .butt {
+        padding: 0.45rem 1.2rem;
+    }
+}
+@media (max-width: 670px){
+    .content h2 {
+        font-size: 0.7rem;
+    }
+    .text3 h3 {
+        font-size: 0.7rem;
+    }
+    .menuitem a {
+        font-size: 11px;
+
+    }
+    .homepage {
+        height: 50vh;
+        background-size: cover;
+    }
+    .content p {
+        line-height: -1rem;
+        font-size: 0.7rem;
+    }
+    .email {
+        padding-left: 20px;
+        border: none;
+        width: 140px;
+        height: 30px;
+    }
+    .butt {
+        padding: 0.5rem 1rem;
+    }
+    .hometext{
+        padding: 30px 60px;
+        font-size: 0.7rem;
+        font-weight: 150;
+    }
+    .hometext p {
+        font-size: 0.7rem;
+    }
+}
+@media (max-width: 730px){
+    .content h2 {
+        font-size: 0.8rem;
+    }
+    
+}
+@media (max-width: 600px) {
+    .homepage {
+        height: 40vh;
+        background-size: cover;
+    }
+    .productimg p {
+        font-size: 14px;
+        font-weight: 500;
+    }
+    .content h2 {
+        font-size: 0.5rem;
+    }
+        .text1 h1 {
+        font-size: 1.2rem;
+    }
+    .content p {
+        font-size: 0.5rem;
+    }
+    .hometext{
+        padding: 20px 30px;
+        font-size: 0.5rem;
+        font-weight: 150;
+    }
+   
+    .hometext p {
+        font-size: 0.5rem;
+    }
+}
+@media (max-width: 550px){
+
+    .menuitem a {
+        display: none;
+    }
+    .footer a{
+        padding-right: 15px;
+        font-size: 12px;
+    }
+
+}
+@media (max-width: 420px) {
+    .menuitem a {
+        display: none;
+    }
+    .sendmesg {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .footer a{
+        padding-right: 12px;
+        font-size: 9px;
+    }
+    .email {
+    
+        margin-bottom: 10px;
+    }
+    .butt {
+    
+        margin-bottom: 10px;
+    }
+    .content p {
+        font-size: 0.4rem;
+    }
+    .text1 h1 {
+        font-size: 0.9rem;
+    }
+    
+}
+@media (max-width: 380px){
+        .productcontainer {
+        max-width: 170px;
+}
+.content h2 {
+    font-size: 0.4rem;
+}
+}
